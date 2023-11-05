@@ -45,7 +45,7 @@
         <div data-w-id="8902ab60-ff18-1ad1-7b19-201b504196ac" data-animation="over-right" data-collapse="medium"
             data-duration="400" data-easing="ease" data-easing2="ease" role="banner" class="sidebar-wrapper w-nav">
             <div class="overflow-hidden">
-                <div class="sidebar-logo-section-container"><a href="index.html" aria-current="page"
+                <div class="sidebar-logo-section-container"><a href="indexAdmin.html" aria-current="page"
                         class="sidebar-logo-link w-nav-brand w--current"><img
                             src="./images/logobk.svg"
                             loading="eager" alt="Dashdark X Webflow Template - Logo" /></a>
@@ -68,37 +68,37 @@
                     <nav role="navigation" class="sidebar-menu-container w-nav-menu">
                         <div class="sidebar-menu-collapsed-overlay"></div>
                         <!-- Print -->
-                        <a href="/print.html" class="sidebar-dropdown-link" style="text-decoration: none;">
+                        <a href="/configuration.html" class="sidebar-dropdown-link" style="text-decoration: none;">
                             <div data-hover="false" data-delay="0" data-w-id="8902ab60-ff18-1ad1-7b19-201b504196bd"
                                 class="dropdown-wrapper sidebar-dropdown w-dropdown">
                                 <div class="dropdown-toggle sidebar-dropdown">
                                     <div class="flex">
                                         <div class="dashdark-custom-icon sidebar-link-icon"></div>
-                                        <div class="text-200 sidebar-dropdown-text">Printing Service</div>
+                                        <div class="text-200 sidebar-dropdown-text">Printer Configurations</div>
                                     </div>
                                 </div>
                             </div>
                         </a>
                         <!-- Purchase Paper -->
-                        <a href="/pricing.html" class="sidebar-dropdown-link" style="text-decoration: none;">
-                            <div data-hover="false" data-delay="0" data-w-id="8902ab60-ff18-1ad1-7b19-201b504196bd"
-                                class="dropdown-wrapper sidebar-dropdown w-dropdown">
-                                <div class="dropdown-toggle sidebar-dropdown ">
-                                    <div class="flex">
-                                        <div class="dashdark-custom-icon sidebar-link-icon"></div>
-                                        <div class="text-200 sidebar-dropdown-text">Paper Purchase</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                        <!-- View History -->
-                        <a href="/history.html" class="sidebar-dropdown-link" style="text-decoration: none;">
+                        <a href="/historyAdmin.html" class="sidebar-dropdown-link" style="text-decoration: none;">
                             <div data-hover="false" data-delay="0" data-w-id="8902ab60-ff18-1ad1-7b19-201b504196bd"
                                 class="dropdown-wrapper sidebar-dropdown w-dropdown">
                                 <div class="dropdown-toggle sidebar-dropdown ">
                                     <div class="flex">
                                         <div class="dashdark-custom-icon sidebar-link-icon"></div>
                                         <div class="text-200 sidebar-dropdown-text">Printing History</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <!-- View History -->
+                        <a href="/report.html" class="sidebar-dropdown-link" style="text-decoration: none;">
+                            <div data-hover="false" data-delay="0" data-w-id="8902ab60-ff18-1ad1-7b19-201b504196bd"
+                                class="dropdown-wrapper sidebar-dropdown w-dropdown">
+                                <div class="dropdown-toggle sidebar-dropdown ">
+                                    <div class="flex">
+                                        <div class="dashdark-custom-icon sidebar-link-icon"></div>
+                                        <div class="text-200 sidebar-dropdown-text">View Report</div>
                                     </div>
                                 </div>
                             </div>
@@ -113,7 +113,7 @@
                                         srcset="https://assets-global.website-files.com/652a49b013ed5242e0b91280/652a49b013ed5242e0b912f7_john-carter-sidebar-avatar-dashdark-webflow-ecommerce-template-p-500.jpg 500w, https://assets-global.website-files.com/652a49b013ed5242e0b91280/652a49b013ed5242e0b912f7_john-carter-sidebar-avatar-dashdark-webflow-ecommerce-template.jpg 600w"
                                         alt="John Carter - Dashdark X Webflow Template" class="avatar-circle _01" />
                                     <div class="sidebar-user-text-container">
-                                        <div class="text-200 sidebar-dropdown-text color-neutral-100">Do Duy Khuong</div>
+                                        <div class="text-200 sidebar-dropdown-text color-neutral-100">Admin</div>
                                         <div class="text-100 sidebar-dropdown-text color-neutral-400">Account settings
                                         </div>
                                     </div>
@@ -168,8 +168,8 @@
                         <div class="mg-bottom-32px">
                             <div class="_2-items-wrap-container">
                                 <div id="w-node-da0f2b07-b468-c505-1f13-1a3bd5556132-e0b913a0">
-                                    <h1 class="display-4 mg-bottom-4px">Welcome back, Khuong</h1>
-                                    <p class="mg-bottom-0">View your history here</p>
+                                    <h1 class="display-4 mg-bottom-4px">Welcome back, Admin</h1>
+                                    <p class="mg-bottom-0">View system history here</p>
                                 </div>
                                 <div id="w-node-da0f2b07-b468-c505-1f13-1a3bd5556137-e0b913a0" class="buttons-row">
                                     <!--<a
@@ -181,11 +181,11 @@
                                                 loading="eager" alt="" class="btn-icon-right max-h-12px" />
                                         </div>
                                     </a>-->
-                                    <!--<a href="report.html" class="btn-primary w-inline-block">
+                                    <a href="report.html" class="btn-primary w-inline-block">
                                         <div class="flex-horizontal gap-column-6px">
                                             <div>Create report</div>
                                         </div>
-                                    </a>-->
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -360,16 +360,31 @@
                                                 <div class="small-dropdown-toggle w-dropdown-toggle">
                                                     <div class="flex align-center gap-column-4px">
                                                         <div class="dashdark-custom-icon line-height-1em"></div>
+                                                        <div class="text-50 medium">Printers</div>
+                                                    </div>
+                                                    <div class="line-rounded-icon card-dropdown-arrow"></div>
+                                                </div>
+                                                <nav class="small-dropdown-list w-dropdown-list">
+                                                    <div class="small-dropdown-links-container">
+                                                        <a href="#" class="small-dropdown-link w-dropdown-link">Students</a>
+                                                    </div>
+                                                </nav>
+                                            </div>
+                                            <div data-hover="true" data-delay="0"
+                                                data-w-id="9cc462d8-bb30-3faf-01e2-89a59eb05ad4"
+                                                class="mg-sides-0 position-relative---z-index-1 w-dropdown">
+                                                <div class="small-dropdown-toggle w-dropdown-toggle">
+                                                    <div class="flex align-center gap-column-4px">
+                                                        <div class="dashdark-custom-icon line-height-1em"></div>
                                                         <div class="text-50 medium">Jan 2024</div>
                                                     </div>
                                                     <div class="line-rounded-icon card-dropdown-arrow"></div>
                                                 </div>
                                                 <nav class="small-dropdown-list w-dropdown-list">
-                                                    <div class="small-dropdown-links-container"><a href="#"
-                                                            class="small-dropdown-link w-dropdown-link">Dec 2023</a><a
-                                                            href="#" class="small-dropdown-link w-dropdown-link">Nov
-                                                            2023</a><a href="#"
-                                                            class="small-dropdown-link w-dropdown-link">Oct 2023</a>
+                                                    <div class="small-dropdown-links-container">
+                                                        <a href="#" class="small-dropdown-link w-dropdown-link">Dec 2023</a>
+                                                        <a href="#" class="small-dropdown-link w-dropdown-link">Nov 2023</a>
+                                                        <a href="#" class="small-dropdown-link w-dropdown-link">Oct 2023</a>
                                                     </div>
                                                 </nav>
                                             </div>
