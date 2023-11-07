@@ -51,7 +51,8 @@
     ]
     // render history
     var render_student_history = (student_history) => {
-        table = document.getElementById('history_table');
+        table = document.getElementById('history_table') ? document.getElementById('history_table') : null;
+        if (!table) return;
         var addEle = '';
         student_history.map((item) => {
             addEle += '<div class="orders-status-table-row">'
