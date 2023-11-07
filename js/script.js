@@ -7,7 +7,79 @@
  *   Webflow.push(readyFunction);
  */
 
+
+
+
 (() => {
+    const student_history = [
+        {
+            'pid'           : '4321',
+            'printer_num'   : 'printer-01',
+            'venue'         : 'A4 Library',
+            'time'          : '11:59 AM',
+            'date'          : 'Jan 30, 2024',
+            'status'        : 'Completed',
+            'printed'       : 'A4: 10',
+        },
+        {
+            'pid'           : '4320',
+            'printer_num'   : 'printer-02',
+            'venue'         : 'B1 Building',
+            'time'          : '10:37 AM',
+            'date'          : 'Jan 29, 2024',
+            'status'        : 'Completed',
+            'printed'       : 'A4: 5, A3: 2',
+        },
+        {
+            'pid'           : '4319',
+            'printer_num'   : 'printer-05',
+            'venue'         : 'B9 Building',
+            'time'          : '12:17 PM',
+            'date'          : 'Jan 17, 2024',
+            'status'        : 'Cancelled',
+            'printed'       : 'A4: 1',
+        },
+        {
+            'pid'           : '4318',
+            'printer_num'   : 'printer-19',
+            'venue'         : 'B4 Building',
+            'time'          : '6:50 AM',
+            'date'          : 'Jan 12, 2024',
+            'status'        : 'Completed',
+            'printed'       : 'A3: 3',
+        },
+    ]
+    // render history
+    var render_student_history = (student_history) => {
+        table = document.getElementById('history_table');
+        var addEle = '';
+        student_history.map((item) => {
+            addEle += '<div class="orders-status-table-row">'
+            addEle += '<div id="w-node-ffe664cd-effd-fb9f-b3b2-a26245283433-4528342e" class="flex align-center"><div class="paragraph-small color-neutral-100">' +
+                        + item.pid
+                        + '</div> </div>'
+            addEle += '<div id="w-node-ffe664cd-effd-fb9f-b3b2-a26245283446-4528342e"> <div id="w-node-ffe664cd-effd-fb9f-b3b2-a26245283447-4528342e" class="paragraph-small color-neutral-100 mg-bottom-2px">'
+                        + item.printer_num
+                        + '</div>'
+                        + '<div class="paragraph-small">' + item.venue + '</div>'
+                        + '</div>'
+            addEle += '<div class="paragraph-small color-neutral-100">' + item.time + '</div>'
+            addEle += '<div class="paragraph-small color-neutral-100">' + item.date + '</div>'
+            addEle += '<div id="w-node-ffe664cd-effd-fb9f-b3b2-a26245283455-4528342e">'
+                        + '<div><div class="status-badge '+ (item.status == 'Completed'? 'green':'red') + '"><div class="flex align-center gap-column-4px"><div class="small-dot _4px bg-'+ (item.status == 'Completed'? 'green':'red') + '-300"></div>'
+                        + '<div class="paragraph-small">' + item.status + '</div>'
+                        + '</div></div></div></div>'
+            
+            addEle += '<div id="w-node-ffe664cd-effd-fb9f-b3b2-a26245283466-4528342e"  class="paragraph-small color-neutral-100">' + item.printed + '</div>'
+            addEle += '<div id="w-node-ffe664cd-effd-fb9f-b3b2-a2624528346c-4528342e" class="flex align-center gap-column-6px"> </div>'
+            addEle += '</div>'
+        })
+
+        table.innerHTML = addEle;
+    }
+    render_student_history(student_history);
+
+
     var __getOwnPropNames = Object.getOwnPropertyNames;
     var __commonJS = (cb, mod) => function __require() {
         return mod || (0, cb[__getOwnPropNames(cb)[0]])((mod = { exports: {} }).exports, mod), mod.exports;
@@ -14208,6 +14280,8 @@
             });
         }
     });
+
+    
 
     // <stdin>
     require_webflow_brand();
