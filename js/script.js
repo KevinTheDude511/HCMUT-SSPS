@@ -17,7 +17,7 @@
             'printer_num'   : 'printer-01',
             'venue'         : 'A4 Library',
             'time'          : '11:59 AM',
-            'date'          : 'Jan 30, 2024',
+            'date'          : 'Feb 03, 2024',
             'status'        : 'Completed',
             'printed'       : 'A4: 10',
         },
@@ -48,37 +48,89 @@
             'status'        : 'Completed',
             'printed'       : 'A3: 3',
         },
-    ]
+    ];
+    var month = [];
+
+
+
+    
+    
+    var getMonth = (history) => {
+        history.map((item) => {
+            var date = item.date;
+            let month_name = date.substr(0, 3) + ' ' + date.substr(8, 12)
+            if (!month.includes(month_name)) month.push(month_name);
+        })
+    }
+    getMonth(student_history);
+
+    var render_sort_menu = (month_list) => {
+        const div = document.getElementById('sort-by-month') ? document.getElementById('sort-by-month') : null;
+        if (!div) return;
+
+        var addEle = '<a href="#" class="small-dropdown-link w-dropdown-link month-sort">' + 'All' + '</a>';
+        month_list.map((month) => {
+            addEle += '<a href="#" class="small-dropdown-link w-dropdown-link month-sort">' + month + '</a>'
+        })
+
+        div.innerHTML = addEle;
+    }
+    render_sort_menu(month);
+
+
+    
+
     // render history
-    var render_student_history = (student_history) => {
+    var render_student_history = (student_history, month = '', year = '') => {
         table = document.getElementById('history_table') ? document.getElementById('history_table') : null;
         if (!table) return;
         var addEle = '';
         student_history.map((item) => {
-            addEle += '<div class="orders-status-table-row">'
-            addEle += '<div id="w-node-ffe664cd-effd-fb9f-b3b2-a26245283433-4528342e" class="flex align-center"><div class="paragraph-small color-neutral-100">' +
-                        + item.pid
-                        + '</div> </div>'
-            addEle += '<div id="w-node-ffe664cd-effd-fb9f-b3b2-a26245283446-4528342e"> <div id="w-node-ffe664cd-effd-fb9f-b3b2-a26245283447-4528342e" class="paragraph-small color-neutral-100 mg-bottom-2px">'
-                        + item.printer_num
-                        + '</div>'
-                        + '<div class="paragraph-small">' + item.venue + '</div>'
-                        + '</div>'
-            addEle += '<div class="paragraph-small color-neutral-100">' + item.time + '</div>'
-            addEle += '<div class="paragraph-small color-neutral-100">' + item.date + '</div>'
-            addEle += '<div id="w-node-ffe664cd-effd-fb9f-b3b2-a26245283455-4528342e">'
-                        + '<div><div class="status-badge '+ (item.status == 'Completed'? 'green':'red') + '"><div class="flex align-center gap-column-4px"><div class="small-dot _4px bg-'+ (item.status == 'Completed'? 'green':'red') + '-300"></div>'
-                        + '<div class="paragraph-small">' + item.status + '</div>'
-                        + '</div></div></div></div>'
-            
-            addEle += '<div id="w-node-ffe664cd-effd-fb9f-b3b2-a26245283466-4528342e"  class="paragraph-small color-neutral-100">' + item.printed + '</div>'
-            addEle += '<div id="w-node-ffe664cd-effd-fb9f-b3b2-a2624528346c-4528342e" class="flex align-center gap-column-6px"> </div>'
-            addEle += '</div>'
+
+            if ((month == '' && year == '') || (month == item.date.substr(0, 3) && year == item.date.substr(8, 12))) {
+                addEle += '<div class="orders-status-table-row">'
+                addEle += '<div id="w-node-ffe664cd-effd-fb9f-b3b2-a26245283433-4528342e" class="flex align-center"><div class="paragraph-small color-neutral-100">' +
+                            + item.pid
+                            + '</div> </div>'
+                addEle += '<div id="w-node-ffe664cd-effd-fb9f-b3b2-a26245283446-4528342e"> <div id="w-node-ffe664cd-effd-fb9f-b3b2-a26245283447-4528342e" class="paragraph-small color-neutral-100 mg-bottom-2px">'
+                            + item.printer_num
+                            + '</div>'
+                            + '<div class="paragraph-small">' + item.venue + '</div>'
+                            + '</div>'
+                addEle += '<div class="paragraph-small color-neutral-100">' + item.time + '</div>'
+                addEle += '<div class="paragraph-small color-neutral-100">' + item.date + '</div>'
+                addEle += '<div id="w-node-ffe664cd-effd-fb9f-b3b2-a26245283455-4528342e">'
+                            + '<div><div class="status-badge '+ (item.status == 'Completed'? 'green':'red') + '"><div class="flex align-center gap-column-4px"><div class="small-dot _4px bg-'+ (item.status == 'Completed'? 'green':'red') + '-300"></div>'
+                            + '<div class="paragraph-small">' + item.status + '</div>'
+                            + '</div></div></div></div>'
+                
+                addEle += '<div id="w-node-ffe664cd-effd-fb9f-b3b2-a26245283466-4528342e"  class="paragraph-small color-neutral-100">' + item.printed + '</div>'
+                addEle += '<div id="w-node-ffe664cd-effd-fb9f-b3b2-a2624528346c-4528342e" class="flex align-center gap-column-6px"> </div>'
+                addEle += '</div>'
+            }
         })
 
         table.innerHTML = addEle;
     }
     render_student_history(student_history);
+
+    var month_sort = () => {
+        const a_ele = document.getElementsByClassName('month-sort');
+
+        for (let i = 0; i < a_ele.length; i++) {
+            a_ele[i].addEventListener('click', function (event) {
+                text = event.target.innerText;
+                const sort_menu = document.getElementById('sort-menu');
+                sort_menu.innerText = text;
+
+                if (text == 'All')
+                    render_student_history(student_history);
+                else render_student_history(student_history, text.substr(0, 3), text.substr(4, 8));
+            })
+        }
+    }
+    month_sort()
+
 
 
     var __getOwnPropNames = Object.getOwnPropertyNames;
