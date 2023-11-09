@@ -128,7 +128,7 @@
 
 
                         <!-- Printing History -->
-                        <a href="/history.html" class="sidebar-dropdown-link" style="text-decoration: none;">
+                        <a href="./history.html" class="sidebar-dropdown-link" style="text-decoration: none;">
                             <div data-hover="false" data-delay="0" data-w-id="8902ab60-ff18-1ad1-7b19-201b504196bd"
                                 class="dropdown-wrapper sidebar-dropdown w-dropdown"
                             >
@@ -430,18 +430,43 @@
                                         <div class="_2-items-wrap-container gap-12px">
                                             <div data-hover="true" data-delay="0"
                                                 data-w-id="9cc462d8-bb30-3faf-01e2-89a59eb05ad4"
-                                                class="mg-sides-0 position-relative---z-index-1 w-dropdown">
+                                                class="mg-sides-0 position-relative---z-index-1 w-dropdown"
+                                            >
                                                 <div class="small-dropdown-toggle w-dropdown-toggle">
                                                     <div class="flex align-center gap-column-4px">
                                                         <div class="dashdark-custom-icon line-height-1em"></div>
                                                         <!-- <div class="text-50 medium">Jan 2024</div> -->
-                                                        <div class="text-50 medium" id="sort-menu">Sort by month</div>
+                                                        <div class="text-50 medium" id="monthsort-menu">Sort by month</div>
                                                     </div>
                                                     <div class="line-rounded-icon card-dropdown-arrow"></div>
                                                 </div>
+                                                
 
                                                 <nav class="small-dropdown-list w-dropdown-list">
-                                                    <div class="small-dropdown-links-container" id="sort-by-month">
+                                                    <div class="small-dropdown-links-container" id="admin-sort-by-month">
+                                                        <!-- Need to change -->
+                                                        <!-- <a href="#" class="small-dropdown-link w-dropdown-link">Dec 2023</a>
+                                                        <a href="#" class="small-dropdown-link w-dropdown-link">Nov 2023</a>
+                                                        <a href="#" class="small-dropdown-link w-dropdown-link">Oct 2023</a> -->
+                                                    </div>
+                                                </nav>
+                                            </div>
+                                            <div data-hover="true" data-delay="0"
+                                                data-w-id="9cc462d8-bb30-3faf-01e2-89a59eb05ad4"
+                                                class="mg-sides-0 position-relative---z-index-1 w-dropdown"
+                                            >
+                                                <div class="small-dropdown-toggle w-dropdown-toggle">
+                                                    <div class="flex align-center gap-column-4px">
+                                                        <div class="dashdark-custom-icon line-height-1em"></div>
+                                                        <!-- <div class="text-50 medium">Jan 2024</div> -->
+                                                        <div class="text-50 medium" id="printersort-menu">Sort by printer</div>
+                                                    </div>
+                                                    <div class="line-rounded-icon card-dropdown-arrow"></div>
+                                                </div>
+                                                
+
+                                                <nav class="small-dropdown-list w-dropdown-list">
+                                                    <div class="small-dropdown-links-container" id="admin-sort-by-printer">
                                                         <!-- Need to change -->
                                                         <!-- <a href="#" class="small-dropdown-link w-dropdown-link">Dec 2023</a>
                                                         <a href="#" class="small-dropdown-link w-dropdown-link">Nov 2023</a>
@@ -517,7 +542,7 @@
                                             </div>
                                         </div>
 
-                                        <div id="history_table"></div>
+                                        <div id="admin_history_table"></div>
 
                                         <!-- Table row 1st -->
                                         <!-- <div class="orders-status-table-row">
