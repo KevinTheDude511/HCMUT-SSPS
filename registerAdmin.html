@@ -18,16 +18,17 @@
             <div class="login-logo"><img
                 src="./images/logobk.svg"
                 class="img-fluid"/></div>
-            <form data-wf-user-form-type="login" data-wf-user-form-redirect="/resources" method="post" >
+            <form id="admin-form" data-wf-user-form-type="login" data-wf-user-form-redirect="/resources" >
                 <div class="w-users-userformheader form-card-header" >
                     <h2 class="heading h3">Central Authentication Service</h2>
                 <div class="login-divider"></div>
                     <h2 class="heading h3">Admin log in</h2>
                     <p class="login-heading">Fill in your log in details below.</p>
-                </div><input type="email" maxlength="256" placeholder="Your email" name="Email" id="wf-log-in-email"
-                    class="text-field w-input" required="" data-wf-user-form-input-type="email" /><input type="password"
-                    maxlength="256" placeholder="Your password" name="Password" id="wf-log-in-password"
-                    class="text-field w-input" required="" data-wf-user-form-input-type="password" />
+                    <div id="admin-msg"></div>
+                </div><input id="username" type="text" maxlength="256" placeholder="Your username" name="Username" 
+                class="text-field w-input" required="" data-wf-user-form-input-type="email" /><input type="password"
+                maxlength="256" placeholder="Your password" name="Password" id="password"
+                class="text-field w-input" required="" data-wf-user-form-input-type="password" />
                 <div class="login-divider"></div>
                     <input
                     type="submit" value="Log In" data-wait="Please wait..."
@@ -62,5 +63,5 @@
         </div>
     </div>
 </body>
-
+<script src="./js/adminLogin.js"></script>
 </html>
