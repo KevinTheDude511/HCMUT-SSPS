@@ -1,3 +1,4 @@
+updateCartQuantity();
 document.querySelectorAll('.increase').forEach((button) => {
   button.addEventListener('click', () => {
     const paperID = button.dataset.counterId;
@@ -20,7 +21,6 @@ document.querySelectorAll('.js-add-to-cart').forEach((button) => {
   button.addEventListener('click', () => {
     const paperId = button.dataset.paperId;
     let matchingItem;
-    console.log(paperId);
     cart.forEach((item) => {
       if (paperId === item.paperId) {
         matchingItem = item;
@@ -38,12 +38,15 @@ document.querySelectorAll('.js-add-to-cart').forEach((button) => {
         quantity: Number(data),
       })};
     }
-    console.log(cart);
+    saveToStorage();
+    updateCartQuantity();
+    document.getElementById(counterId).value = 0;
+  });
+});
+function updateCartQuantity() {
     let cartQuantity = 0;
     cart.forEach((item) => {
       cartQuantity += 1;
     });
-    document.getElementById(counterId).value = 0;
     document.querySelector(".js-cart-quantity").innerHTML = cartQuantity;
-  });
-});
+  }
