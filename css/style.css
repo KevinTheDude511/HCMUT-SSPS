@@ -2564,7 +2564,7 @@ figcaption {
 .grid-4-columns.pricing-table {
     grid-column-gap: 0px;
     grid-row-gap: 0px;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr ;
 }
 
 .bg-secondary-2 {
