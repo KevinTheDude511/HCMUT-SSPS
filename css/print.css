@@ -62,3 +62,13 @@
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 999;
 }
+
+#paper_div {
+    background-color: #1b2646;
+    /* border: 1px solid #ccc; */
+    border-radius: 5px;
+    box-shadow: 0 0 0.5px #ccc;
+    margin: 0 auto;
+    padding: 5px;
+    width: 130px;
+}

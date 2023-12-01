@@ -1,4 +1,6 @@
-file_valid = 0;  // 0: not uploaded, -1: wrong type of files 1: uploaded
+// file_valid = 0;  // 0: not uploaded, -1: wrong type of files 1: uploaded
+
+conf = sharedConfig
 
 
 const toggleVisibility = () => {
@@ -19,7 +21,7 @@ const toggleVisibility = () => {
 
 
 
-const checkPrinting = () => {
+const checkPrinting = async () => {
     const selectElement = document.getElementById('fileInput');
 
     const fileInput = document.getElementById('fileInput');
@@ -36,30 +38,46 @@ const checkPrinting = () => {
             fileExtension === 'pptx' || fileExtension === 'ppt' ||
             fileExtension === 'xlsx' || fileExtension === 'xls' ||
             fileExtension === 'png' || fileExtension === 'jpg' || fileExtension === 'jpeg') {
-                file_valid = 1
-                console.log('valid file')   
+            console.log('valid file')  
+
+            var reader = new FileReader();
+            let pagesCount = 0;
+
+            reader.readAsBinaryString(fileInput.files[0]);
+            reader.onloadend = (pagesCount) => {
+                pagesCount = reader.result.match(/\/Type[\s]*\/Page[^s]/g).length;
+                console.log(`Not enough paper (${pagesCount} pages > ${conf.current_paper} pages)`);
+                
+                if (pagesCount > conf.current_paper)
+                    openCustomAlert(2, 12)
+                else openCustomConfirm(1)
+            }                
+            
         } else {
-            file_valid = -1
-            console.log('invalid file')
+            // file_valid = -1
+            openCustomAlert(-1)
+            // console.log('invalid file')
         }
     } else {
-        file_valid = 0
+        openCustomAlert(0)
         console.log('no file')
-    }
-    if (file_valid != 1) openCustomAlert()
-    else openCustomConfirm(fileName)
-        
+    }        
 }
 
-function openCustomAlert() {
+function openCustomAlert(file_valid, pages = 0) {
     const modal = document.getElementById('customAlert');
     const overlay = document.getElementById('modalOverlay');
     const pEle = document.getElementById('pEle-alert');
 
     modal.style.display = 'block';
     overlay.style.display = 'block';
-    if (file_valid === 0) pEle.textContent  = "Your file has not been uploaded!";
-    else if (file_valid === -1) pEle.textContent  = "Please upload a valid file!";
+
+
+    console.log(conf.current_paper)
+
+    if (file_valid === 0) pEle.textContent  = 'Your file has not been uploaded!';
+    else if (file_valid === -1) pEle.textContent  = 'Please upload a valid file!';
+    else if (file_valid === 2) pEle.textContent  = `Need ${pages - conf.current_paper} more pages to print`;
 }
 
 

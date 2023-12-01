@@ -8,6 +8,12 @@
  */
 
 
+var sharedConfig = {
+    sharedVariable: "Hello from script1!",
+    current_paper: 10,
+};
+
+
 
 
 (() => {
@@ -271,7 +277,7 @@
     getMonth_Printer(admin_history);
 
     // console.log(month_admin);
-    console.log(printer_admin);
+    // console.log(printer_admin);
 
 
 
