@@ -22,6 +22,7 @@ var sharedConfig = {
     const student_history = [
         {
             'pid'           : '4321',
+            'filename'      : 'PPL_report4.pdf',
             'printer_num'   : 'printer-01',
             'venue'         : 'A4 Library',
             'time'          : '11:59 AM',
@@ -31,6 +32,7 @@ var sharedConfig = {
         },
         {
             'pid'           : '4320',
+            'filename'      : 'SE_final.docx',
             'printer_num'   : 'printer-02',
             'venue'         : 'B1 Building',
             'time'          : '10:37 AM',
@@ -40,6 +42,7 @@ var sharedConfig = {
         },
         {
             'pid'           : '4319',
+            'filename'      : 'ComNet_Review.docx',
             'printer_num'   : 'printer-05',
             'venue'         : 'B9 Building',
             'time'          : '12:17 PM',
@@ -49,6 +52,7 @@ var sharedConfig = {
         },
         {
             'pid'           : '4318',
+            'filename'      : 'Report_SE.pdf',
             'printer_num'   : 'printer-19',
             'venue'         : 'B4 Building',
             'time'          : '6:50 AM',
@@ -93,6 +97,7 @@ var sharedConfig = {
                 addEle += '<div id="w-node-ffe664cd-effd-fb9f-b3b2-a26245283433-4528342e" class="flex align-center"><div class="paragraph-small color-neutral-100">' +
                             + item.pid
                             + '</div> </div>'
+                addEle += '<div class="paragraph-small color-neutral-100">' + item.filename + '</div>'
                 addEle += '<div id="w-node-ffe664cd-effd-fb9f-b3b2-a26245283446-4528342e"> <div id="w-node-ffe664cd-effd-fb9f-b3b2-a26245283447-4528342e" class="paragraph-small color-neutral-100 mg-bottom-2px">'
                             + item.printer_num
                             + '</div>'
@@ -333,6 +338,7 @@ var sharedConfig = {
                             + '</div>'
                             + '<div class="paragraph-small">' + item.venue + '</div>'
                             + '</div>'
+                addEle += '<div class="paragraph-small color-neutral-100">' + item.studentID + '</div>'
                 addEle += '<div class="paragraph-small color-neutral-100">' + item.time + '</div>'
                 addEle += '<div class="paragraph-small color-neutral-100">' + item.date + '</div>'
                 addEle += '<div id="w-node-ffe664cd-effd-fb9f-b3b2-a26245283455-4528342e">'
