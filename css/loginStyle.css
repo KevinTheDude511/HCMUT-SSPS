@@ -240,7 +240,7 @@ html {
   }
   html.w-mod-touch * {
     background-attachment: scroll !important;
-  }
+  } 
   .login-identifying-provider-btn{
   
     -webkit-text-size-adjust: 100%;
@@ -288,7 +288,7 @@ html {
     color: white;
     text-align: center;
     vertical-align: middle;
-    background-color: #6c72ff;
+    background-color: var(--accent--primary-1); 
     padding: .375rem .75rem;
     line-height: 1.5;
     border-radius: .5rem;
@@ -301,6 +301,7 @@ html {
     cursor: pointer;
     margin-top: 8px;
     margin-bottom: 8px;
+    color: black;
   }
   .img-fluid{
     -webkit-text-size-adjust: 100%;
@@ -5178,7 +5179,7 @@ html {
     border-radius: 12px;
     border-top-right-radius: 0px;
     border-bottom-right-radius: 0px;
-    background-color: #1A2446;
+    background-color: #101935;
     color: #1d1d1d;
   }
   
