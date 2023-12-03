@@ -3282,7 +3282,7 @@ figcaption {
     background-color: var(--accent--primary-1);
 }
 .paper-column-A3:hover .pricing-content-wrapper.A3{
-    background-color: #7b80ff;
+    background-color: #494c99;
 }
 .paper-column-A4:hover .pricing-table-top.A4{
     background-color: var(--accent--primary-1);
@@ -3291,7 +3291,7 @@ figcaption {
     background-color: var(--accent--primary-1);
 }
 .paper-column-A4:hover .pricing-content-wrapper.A4{
-    background-color: #7b80ff;
+    background-color: #494c99;
 }
 .pricing-table-top.left {
     border-top-left-radius: 12px;
