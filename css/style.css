@@ -2985,7 +2985,7 @@ figcaption {
 }
 
 .btn-secondary:hover {
-    background-color: var(--accent--primary-1);
+    background-color: var(--accent---1);
     color: var(--neutral--100);
 }
 
@@ -3001,7 +3001,7 @@ figcaption {
 }
 
 .btn-secondary.bg-neutral-600:hover {
-    background-color: var(--accent--primary-1);
+    background-color: #4b4fb2;
 }
 
 .input {
