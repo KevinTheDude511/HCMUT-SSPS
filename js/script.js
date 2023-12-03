@@ -7,11 +7,182 @@
  *   Webflow.push(readyFunction);
  */
 
+pid = 2001;
+const student_history = [
+    {
+        'pid'           : '4321',
+        'filename'      : 'PPL_report4.pdf',
+        'printer_num'   : 'printer-01',
+        'venue'         : 'A4 Library',
+        'time'          : '11:59 AM',
+        'date'          : 'Feb 03, 2024',
+        'status'        : 'Completed',
+        'printed'       : 'A4: 10',
+    },
+    {
+        'pid'           : '4320',
+        'filename'      : 'SE_final.docx',
+        'printer_num'   : 'printer-02',
+        'venue'         : 'B1 Building',
+        'time'          : '10:37 AM',
+        'date'          : 'Jan 29, 2024',
+        'status'        : 'Completed',
+        'printed'       : 'A4: 5, A3: 2',
+    },
+    {
+        'pid'           : '4319',
+        'filename'      : 'ComNet_Review.docx',
+        'printer_num'   : 'printer-05',
+        'venue'         : 'B9 Building',
+        'time'          : '12:17 PM',
+        'date'          : 'Jan 17, 2024',
+        'status'        : 'Cancelled',
+        'printed'       : 'A4: 1',
+    },
+    {
+        'pid'           : '4318',
+        'filename'      : 'Report_SE.pdf',
+        'printer_num'   : 'printer-19',
+        'venue'         : 'B4 Building',
+        'time'          : '6:50 AM',
+        'date'          : 'Jan 12, 2024',
+        'status'        : 'Completed',
+        'printed'       : 'A3: 3',
+    },
+];
+const admin_history = [
+    {
+        'pid'           : pid = pid - 1,
+        'printer_num'   : 'printer-01',
+        'venue'         : 'A4 Library',
+        'time'          : '11:59 AM',
+        'date'          : 'Mar 03, 2024',
+        'status'        : 'Completed',
+        'printed'       : 'A4: 10',
+        'studentID'     : '2152966',
+    },
+    {
+        'pid'           : pid = pid - 1,
+        'printer_num'   : 'printer-19',
+        'venue'         : 'B4 Building',
+        'time'          : '12:45 PM',
+        'date'          : 'Mar 03, 2024',
+        'status'        : 'Completed',
+        'printed'       : 'A5: 5',
+        'studentID'     : '2152591',
+    },
+    {
+        'pid'           : pid = pid - 1,
+        'printer_num'   : 'printer-01',
+        'venue'         : 'A4 Library',
+        'time'          : '3:37 AM',
+        'date'          : 'Mar 03, 2024',
+        'status'        : 'Cancelled',
+        'printed'       : 'A4: 2',
+        'studentID'     : '2153379',
+    },
+    {
+        'pid'           : pid = pid - 1,
+        'printer_num'   : 'printer-01',
+        'venue'         : 'A4 Library',
+        'time'          : '11:59 AM',
+        'date'          : 'Mar 02, 2024',
+        'status'        : 'Completed',
+        'printed'       : 'A4: 10',
+        'studentID'     : '2152966',
+    },
+    {
+        'pid'           : pid = pid - 1,
+        'printer_num'   : 'printer-01',
+        'venue'         : 'A4 Library',
+        'time'          : '11:59 AM',
+        'date'          : 'Mar 01, 2024',
+        'status'        : 'Completed',
+        'printed'       : 'A4: 10',
+        'studentID'     : '2152966',
+    },
+    {
+        'pid'           : pid = pid - 1,
+        'printer_num'   : 'printer-05',
+        'venue'         : 'B9 Building',
+        'time'          : '10:37 AM',
+        'date'          : 'Feb 29, 2024',
+        'status'        : 'Completed',
+        'printed'       : 'A4: 5, A3: 2',
+        'studentID'     : '2152143',
+    },
+    {
+        'pid'           : pid = pid - 1,
+        'printer_num'   : 'printer-05',
+        'venue'         : 'B9 Building',
+        'time'          : '12:17 PM',
+        'date'          : 'Feb 17, 2024',
+        'status'        : 'Cancelled',
+        'printed'       : 'A4: 1',
+        'studentID'     : '2152591',
+    },
+    {
+        'pid'           : pid = pid - 1,
+        'printer_num'   : 'printer-19',
+        'venue'         : 'B4 Building',
+        'time'          : '6:50 AM',
+        'date'          : 'Feb 12, 2024',
+        'status'        : 'Completed',
+        'printed'       : 'A4: 1, A3: 3',
+        'studentID'     : '2153379',
+    },
+    {
+        'pid'           : pid = pid - 1,
+        'printer_num'   : 'printer-05',
+        'venue'         : 'B9 Building',
+        'time'          : '11:30 AM',
+        'date'          : 'Feb 11, 2024',
+        'status'        : 'Completed',
+        'printed'       : 'A3: 3, A5: 5',
+        'studentID'     : '2153488',
+    },
+    {
+        'pid'           : pid = pid - 1,
+        'printer_num'   : 'printer-01',
+        'venue'         : 'A4 Library',
+        'time'          : '2:30 PM',
+        'date'          : 'Jan 27, 2024',
+        'status'        : 'Completed',
+        'printed'       : 'A3: 3, A5: 2',
+        'studentID'     : '2152040',
+    },
+    {
+        'pid'           : pid = pid - 1,
+        'printer_num'   : 'printer-05',
+        'venue'         : 'B9 Building',
+        'time'          : '12:17 PM',
+        'date'          : 'Jan 17, 2024',
+        'status'        : 'Completed',
+        'printed'       : 'A4: 1',
+        'studentID'     : '2152591',
+    },
+    {
+        'pid'           : pid = pid - 1,
+        'printer_num'   : 'printer-05',
+        'venue'         : 'B9 Building',
+        'time'          : '1:19 PM',
+        'date'          : 'Jan 17, 2024',
+        'status'        : 'Completed',
+        'printed'       : 'A4: 1',
+        'studentID'     : '2152591',
+    },
+    
+];
+
 
 var sharedConfig = {
     sharedVariable: "Hello from script1!",
     current_paper: 10,
+    student_history,
+    admin_history,
 };
+
+
 
 
 
@@ -19,48 +190,7 @@ var sharedConfig = {
 (() => {
     
     // STUDENT  ------------------------
-    const student_history = [
-        {
-            'pid'           : '4321',
-            'filename'      : 'PPL_report4.pdf',
-            'printer_num'   : 'printer-01',
-            'venue'         : 'A4 Library',
-            'time'          : '11:59 AM',
-            'date'          : 'Feb 03, 2024',
-            'status'        : 'Completed',
-            'printed'       : 'A4: 10',
-        },
-        {
-            'pid'           : '4320',
-            'filename'      : 'SE_final.docx',
-            'printer_num'   : 'printer-02',
-            'venue'         : 'B1 Building',
-            'time'          : '10:37 AM',
-            'date'          : 'Jan 29, 2024',
-            'status'        : 'Completed',
-            'printed'       : 'A4: 5, A3: 2',
-        },
-        {
-            'pid'           : '4319',
-            'filename'      : 'ComNet_Review.docx',
-            'printer_num'   : 'printer-05',
-            'venue'         : 'B9 Building',
-            'time'          : '12:17 PM',
-            'date'          : 'Jan 17, 2024',
-            'status'        : 'Cancelled',
-            'printed'       : 'A4: 1',
-        },
-        {
-            'pid'           : '4318',
-            'filename'      : 'Report_SE.pdf',
-            'printer_num'   : 'printer-19',
-            'venue'         : 'B4 Building',
-            'time'          : '6:50 AM',
-            'date'          : 'Jan 12, 2024',
-            'status'        : 'Completed',
-            'printed'       : 'A3: 3',
-        },
-    ];
+    
     var month = [];   
     
     var getMonth = (history) => {
@@ -141,130 +271,7 @@ var sharedConfig = {
 
 
     // ADMIN --------------------------
-    pid = 2001;
-    const admin_history = [
-        {
-            'pid'           : pid = pid - 1,
-            'printer_num'   : 'printer-01',
-            'venue'         : 'A4 Library',
-            'time'          : '11:59 AM',
-            'date'          : 'Mar 03, 2024',
-            'status'        : 'Completed',
-            'printed'       : 'A4: 10',
-            'studentID'     : 2152966,
-        },
-        {
-            'pid'           : pid = pid - 1,
-            'printer_num'   : 'printer-19',
-            'venue'         : 'B4 Building',
-            'time'          : '12:45 PM',
-            'date'          : 'Mar 03, 2024',
-            'status'        : 'Completed',
-            'printed'       : 'A5: 5',
-            'studentID'     : 2152591,
-        },
-        {
-            'pid'           : pid = pid - 1,
-            'printer_num'   : 'printer-01',
-            'venue'         : 'A4 Library',
-            'time'          : '3:37 AM',
-            'date'          : 'Mar 03, 2024',
-            'status'        : 'Cancelled',
-            'printed'       : 'A4: 2',
-            'studentID'     : 2153379,
-        },
-        {
-            'pid'           : pid = pid - 1,
-            'printer_num'   : 'printer-01',
-            'venue'         : 'A4 Library',
-            'time'          : '11:59 AM',
-            'date'          : 'Mar 02, 2024',
-            'status'        : 'Completed',
-            'printed'       : 'A4: 10',
-            'studentID'     : 2152966,
-        },
-        {
-            'pid'           : pid = pid - 1,
-            'printer_num'   : 'printer-01',
-            'venue'         : 'A4 Library',
-            'time'          : '11:59 AM',
-            'date'          : 'Mar 01, 2024',
-            'status'        : 'Completed',
-            'printed'       : 'A4: 10',
-            'studentID'     : 2152966,
-        },
-        {
-            'pid'           : pid = pid - 1,
-            'printer_num'   : 'printer-05',
-            'venue'         : 'B9 Building',
-            'time'          : '10:37 AM',
-            'date'          : 'Feb 29, 2024',
-            'status'        : 'Completed',
-            'printed'       : 'A4: 5, A3: 2',
-            'studentID'     : 2152143,
-        },
-        {
-            'pid'           : pid = pid - 1,
-            'printer_num'   : 'printer-05',
-            'venue'         : 'B9 Building',
-            'time'          : '12:17 PM',
-            'date'          : 'Feb 17, 2024',
-            'status'        : 'Cancelled',
-            'printed'       : 'A4: 1',
-            'studentID'     : 2152591,
-        },
-        {
-            'pid'           : pid = pid - 1,
-            'printer_num'   : 'printer-19',
-            'venue'         : 'B4 Building',
-            'time'          : '6:50 AM',
-            'date'          : 'Feb 12, 2024',
-            'status'        : 'Completed',
-            'printed'       : 'A4: 1, A3: 3',
-            'studentID'     : 2153379,
-        },
-        {
-            'pid'           : pid = pid - 1,
-            'printer_num'   : 'printer-05',
-            'venue'         : 'B9 Building',
-            'time'          : '11:30 AM',
-            'date'          : 'Feb 11, 2024',
-            'status'        : 'Completed',
-            'printed'       : 'A3: 3, A5: 5',
-            'studentID'     : 2153488,
-        },
-        {
-            'pid'           : pid = pid - 1,
-            'printer_num'   : 'printer-01',
-            'venue'         : 'A4 Library',
-            'time'          : '2:30 PM',
-            'date'          : 'Jan 27, 2024',
-            'status'        : 'Completed',
-            'printed'       : 'A3: 3, A5: 2',
-            'studentID'     : 2152040,
-        },
-        {
-            'pid'           : pid = pid - 1,
-            'printer_num'   : 'printer-05',
-            'venue'         : 'B9 Building',
-            'time'          : '12:17 PM',
-            'date'          : 'Jan 17, 2024',
-            'status'        : 'Completed',
-            'printed'       : 'A4: 1',
-            'studentID'     : 2152591,
-        },
-        {
-            'pid'           : pid = pid - 1,
-            'printer_num'   : 'printer-05',
-            'venue'         : 'B9 Building',
-            'time'          : '1:19 PM',
-            'date'          : 'Jan 17, 2024',
-            'status'        : 'Completed',
-            'printed'       : 'A4: 1',
-            'studentID'     : 2152591,
-        },
-        
-    ];
+    
     var month_admin = [];
     var printer_admin = [];
     
