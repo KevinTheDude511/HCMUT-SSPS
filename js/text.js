@@ -14,3 +14,12 @@ var x = document.getElementById('login-message');
             x.class="errors";
         }
     })
+    form.addEventListener('reset',function(event){
+        event.preventDefault();
+        x.innerHTML="";
+        var username=document.getElementById('username');
+        var password=document.getElementById('password');
+        username.value="";
+        password.value="";
+
+    })
