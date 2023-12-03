@@ -722,9 +722,9 @@ html {
     margin-bottom: 10px;
     font-size: 14px;
     line-height: 1.42857143;
-    color: #333333;
+    color: black;
     vertical-align: middle;
-    background-color: #ffffff;
+    background-color: black;
     border: 1px solid #cccccc;
   }
   .w-input:-moz-placeholder,
@@ -2353,7 +2353,7 @@ html {
     border-top-right-radius: 12px;
     display: flex;
     margin-bottom:100px;
-    margin-right:100px;
+    margin-right:300px;
   
   }
   
@@ -2756,7 +2756,7 @@ html {
     -ms-flex: 0 0 auto;
     flex: 0 0 auto;
     border-radius: 9px;
-    background-color: #1d1d1d;
+    background-color: #6c72ff;
     box-shadow: 0 2px 0 0 rgba(32, 32, 32, 0.05);
     -webkit-transition: box-shadow 200ms ease, border-color 200ms ease,
       color 200ms ease, background-color 200ms ease, -webkit-transform 200ms ease;
@@ -3654,11 +3654,11 @@ html {
     min-width: 120px;
     margin-bottom: 16px;
     padding: 19px 12px;
-    border-style: solid;
+    border-style: none;
     border-width: 1px;
     border-color: #e7ecf0;
     border-radius: 9px;
-    background-color: #f5f6f7;
+    background-color: #56628A;
     -webkit-transition: border-color 200ms ease;
     transition: border-color 200ms ease;
     font-size: 15px;
@@ -3670,19 +3670,19 @@ html {
   }
   
   .text-field::-webkit-input-placeholder {
-    color: #cbd5df;
+    color: black;
   }
   
   .text-field:-ms-input-placeholder {
-    color: #cbd5df;
+    color: black;
   }
   
   .text-field::-ms-input-placeholder {
-    color: #cbd5df;
+    color: black;
   }
   
   .text-field::placeholder {
-    color: #cbd5df;
+    color: black;
   }
   
   .text-field.no-margin {
