@@ -4368,6 +4368,17 @@ figcaption {
     padding: 8px 10px;
     display: flex;
 }
+.component-settings-badge1 {
+    min-height: 32px;
+    width: 85px;
+    grid-column-gap: 8px;
+    border: 1px solid var(--neutral--600);
+    background-color: var(--neutral--700);
+    border-radius: 4px;
+    align-items: center;
+    padding: 8px 10px;
+    display: flex;
+}
 
 .table-main-container {
     margin-bottom: -.6px;
