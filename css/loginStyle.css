@@ -3655,7 +3655,6 @@ html {
   }
   
   .text-field {
-    text-align: center;
     height: 44px;
     min-width: 120px;
     margin-bottom: 16px;
@@ -3672,7 +3671,7 @@ html {
   }
   
   .text-field:focus {
-    outline: 2px solid #545AA7;
+    outline: 2.5px solid #545AA7;
     border-color: #33383f;
   }
   .text-field::-webkit-input-placeholder {
