@@ -302,6 +302,11 @@ html {
     margin-top: 8px;
     margin-bottom: 8px;
     color: black;
+    background-color: #6c72ff;color:white
+    
+  }
+  .login-identifying-provider-btn:hover{
+    background-color: #898eff;
   }
   .img-fluid{
     -webkit-text-size-adjust: 100%;
@@ -3650,6 +3655,7 @@ html {
   }
   
   .text-field {
+    text-align: center;
     height: 44px;
     min-width: 120px;
     margin-bottom: 16px;
@@ -3658,7 +3664,7 @@ html {
     border-width: 1px;
     border-color: #e7ecf0;
     border-radius: 9px;
-    background-color: #56628A;
+    background-color: #cccfdb;
     -webkit-transition: border-color 200ms ease;
     transition: border-color 200ms ease;
     font-size: 15px;
@@ -3666,9 +3672,9 @@ html {
   }
   
   .text-field:focus {
+    outline: 2px solid #545AA7;
     border-color: #33383f;
   }
-  
   .text-field::-webkit-input-placeholder {
     color: black;
   }
