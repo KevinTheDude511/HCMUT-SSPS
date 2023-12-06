@@ -262,12 +262,12 @@ th {
   
 .cart-quantity {
     color: #9a91fb;
-    font-size: 16px;
+    font-size: 15px;
     font-weight: 700;
   
     position: absolute;
     top: 4px;
-    left: 22px;
+    left: 11px;
     
     width: 26px;
     text-align: center;
